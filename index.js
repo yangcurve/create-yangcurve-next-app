@@ -9,13 +9,14 @@ if (!projectNameInput) {
 }
 
 const useCurrentDirectory = projectNameInput === '.'
+const cwd = process.cwd()
 
-const projectName = useCurrentDirectory ? process.cwd().split('/').at(-1) : projectNameInput
-const projectPath = `${process.cwd()}/${useCurrentDirectory ? '' : projectName}`
+const projectName = useCurrentDirectory ? cwd.split('/').at(-1) : projectNameInput
+const projectPath = `${cwd}/${useCurrentDirectory ? '' : projectName}`
 
 const newPackageJson = structuredClone(templatePackageJson)
 newPackageJson.name = projectName
 
-cpSync('./template', projectPath, { recursive: true })
+cpSync(`${cwd}/template`, projectPath, { recursive: true })
 
 console.log(`${projectName} successfully created!`)
