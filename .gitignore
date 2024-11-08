@@ -8,7 +8,7 @@
 
 # generated
 /src/hooks/db
-/*.js
+/eslint.config.js
 
 # cache
 bun.lockb
