@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-import templatePackageJson from './template/package.json'
+// eslint-disable-next-line
+import templatePackageJson from './template/package.json' with { type: 'json' }
 import { cpSync } from 'node:fs'
 
 const projectNameInput = process.argv.at(2)
