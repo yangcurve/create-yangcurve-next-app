@@ -1,0 +1,26 @@
+{
+  "name": "create-yangcurve-next-app",
+  "module": "index.ts",
+  "type": "module",
+  "bin": {
+    "create-yangcurve-next-app": "index.js"
+  },
+  "scripts": {
+    "config": "bun build eslint.config.ts --outfile eslint.config.js -e '*'",
+    "build": "bun run lint && bun build index.ts --outfile index.js -e '*'",
+    "lint": "bun run config && tsc -p tsconfig.json && eslint --fix"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/eslint__eslintrc": "^2.1.2",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.12.1",
+    "eslint": "^9.13.0",
+    "eslint-config-next": "^15.0.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "typescript": "^5.0.0"
+  }
+}
