@@ -1,10 +1,13 @@
 {
   "name": "create-yangcurve-next-app",
-  "module": "index.ts",
-  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "yangcurve <utsu0621@gmail.com>",
+  "repository": "github:yangcurve/create-yangcurve-next-app",
   "bin": {
     "create-yangcurve-next-app": "index.js"
   },
+  "type": "module",
   "scripts": {
     "config": "bun build eslint.config.ts --outfile eslint.config.js -e '*'",
     "build": "bun run lint && bun build index.ts --outfile index.js -e '*'",
